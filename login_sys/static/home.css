@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    height: 900px;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid #585899;
+    box-shadow: 8px 6px 20px black;
+    border-radius: 15%;*/
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 100px;
+    height: 500px;
+}
+
+.title {
+    height: 200px;
+    width: 350px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+body {
+    background-image: url(https://e0.pxfuel.com/wallpapers/460/460/desktop-wallpaper-texture-surface-dark-blue-iphone-dark-blue-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* background: rgb(11,3,77);
+background: radial-gradient(circle, rgba(11,3,77,1) 81%, rgba(24,5,191,1) 89%, rgba(38,38,204,1) 95%, rgba(14,200,255,1) 100%); */
+    height: 900px;
+}
+
+button {
+    background: hsl(246deg 54.36% 28.16%);
+    height: 50px;
+    width: 180px;
+    font-size: 20px;
+    box-shadow: 6px 6px 2px 2px hsl(0deg 0% 0%);
+    color: white;
+    border-radius: 26px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button a{
+    color:white;
+    text-decoration:none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #23234e;
+    transition: 0.3s;
+}
+@media screen and (max-width: 600px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+        height: 2000px;
+    }
+   
+    .title {
+        height: 150px !important;
+        width: 250px !important;
+    }
+    body {
+        background-image: url(https://e0.pxfuel.com/wallpapers/460/460/desktop-wallpaper-texture-surface-dark-blue-iphone-dark-blue-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        /* background: rgb(8,18,129);
+        background: radial-gradient(circle, rgba(8,18,129,1) 0%, rgba(24,5,191,1) 23%, rgba(38,38,204,1) 65%, rgba(14,200,255,1) 94%); */
+        height: 900px;
+    }
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*border: 2px solid #585899;
+        box-shadow: 8px 6px 20px black;
+        border-radius: 15%;*/
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 300px;
+        height: 600px;
+    }
+
+}
