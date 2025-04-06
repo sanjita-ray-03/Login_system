@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+            body{
+                padding: 0px;
+                margin: 0px;
+            }
+            .first{
+                width: 100%;
+                height: 500px;
+                background-color: #efefef;
+                padding-top: 150px;
+            }
+            .first .form{
+                width: 54vw;
+                height: auto;
+                min-height: 385px;
+                margin: 0 auto;
+                border-radius: 20px;
+                box-shadow: 9px 10px 17px #4d4d4d52;
+                background-color: #fdfdfd;
+                position: relative;
+                
+            }
+            .first .form .left{
+                width: 50%;
+                height: auto;
+                float: left;
+                min-height: 250px;
+                position: relative;
+            }
+            .first .form .right{
+                width: 50%;
+                height: auto;
+                float: left;
+                min-height: 385px;
+                border-top-left-radius: 77px;
+                border-bottom-left-radius: 77px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background:  linear-gradient(90deg, rgb(255 132 14) 0%, rgb(244 148 62) 35%, rgb(255 221 0) 100%);
+                position: relative; 
+            }
+            .first .form .right .r-panel{
+                width: 20vw;
+                margin: 45px auto;
+                padding: 50px;
+                text-align: center;
+                display:flex;
+                justify-content: center;
+            }
+            .first .form .right .r-panel a{
+                padding: 10px 40px;
+                border-radius: 10px;
+                border: 2px white solid;
+                color: white;
+                text-decoration: none;
+                position: relative;
+                top: 25px;
+                transition: all 0.5s linear;
+            }
+            .first .form .right .r-panel a:hover{
+                background-color: white;
+                padding: 10px 40px;
+                color: black;
+                font-weight: 500;
+                
+            }
+            
+            .first .form .right .r-panel h2,p{
+                color: white;
+            }
+            .first .form .left .form-box{
+                width: 100%;
+                height: auto;
+                min-height: 307px;
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                text-align: center;
+                right: 0px;
+                background-color: transparent;
+            }
+            .first .form .left .form-box .top{
+                width: 100%;
+                height: auto;
+                min-height: 115.5px;
+                padding: 12px 0px;
+                background-color: transparent;
+                text-align: center;
+                display: grid;
+                place-items: center;
+            }
+            .first .form .left .form-box .top .icon{
+                width: 100%;
+                height: 50px;
+            
+            }
+            .first .form .left .form-box .top p{
+                color: #555555;
+                margin-top: 5px;
+                margin-bottom: 0px;
+            }.first .form .left .form-box .top .icon a{
+                text-decoration: none;
+                color: black;
+            }
+            .first .form .left .form-box .top .icon a i{
+                width: 20px;
+                height: 18px;
+                padding: 12px 10px 10px 10px;
+                font-size: 1rem;
+                border: 1.5px #afafaf solid;
+                border-radius: 12px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .first .form .left .form-box .buttom{
+                width: 100%;
+                height: auto;
+                min-height: 165.5px;
+            
+                background-color: transparent;
+            
+            }
+            .first .form .left .form-box .buttom form{
+                width: 60%;
+                height: auto;
+                min-height: 80px;
+                padding: 10px 0px 10px 50px;
+            }
+            .first .form .left .form-box .buttom form #username{
+                width: 20vw;
+                height: 30px;
+                background-color: #efefef;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+            .first .form .left .form-box .buttom form #pass1{
+                width: 20vw;
+                height: 30px;
+                background-color: #efefef;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                /* margin-bottom:; */
+            }
+            .first .form .left .form-box .buttom form #username::placeholder,#pass1::placeholder{
+                position: relative;
+                left: 10px;
+            }.first .form .left .form-box .buttom form p{
+                position: relative;
+               
+                color: #555555;
+            }
+            .first .form .left .form-box .buttom form p a{
+                text-decoration: none;
+                color: #555555;
+                font-weight: 800;
+                transition: all 0.5s linear;
+            }
+            .first .form .left .form-box .buttom form p a:hover{
+                color: rgb(248 17 17);
+            }
+            .first .form .left .form-box .buttom form #button{
+                width: 115px;
+                height: 35px;
+                border: none;
+                font-weight: 700;
+                border-radius: 8px;
+                outline: none;
+                background-color: rgb(248 17 17);
+                
+                color: white;
+                cursor: pointer;
+            }
+            @media (max-width:850px) {
+                .first .form .left .form-box .top .icon a i {
+                    width: 5px;
+                    height: 5px;
+                    padding: 6px 8px 10px 5px;
+                    font-size: 0.7rem;
+                    border: 1.5px #afafaf solid;
+                    border-radius: 4px;
+                    margin-left: 7px;
+                    cursor: pointer;
+                }
+                .first .form .right{
+                    opacity: 0;
+                }
+                .container form h1{
+                    font-size: 1.3rem;
+                }
+                .first .form .left .form-box .buttom form #username{
+                    width: 15vw;
+            
+                }
+                .first .form .left .form-box .buttom form #pass1{
+                    width: 32vw;
+                    
+                }
+                .first .form .right .r-panel a{
+                    padding: 10px 14px;
+                }
+                .first .form .left .form-box .buttom form #button {
+                    width: 80px;
+                }
+            
+                
+                 .first .form {
+                    width: 54vw;
+                    height: auto;
+                    min-height: 500px;
+                    margin: 0 auto;
+                    border-radius: 20px;
+                    box-shadow: 9px 10px 17px #4d4d4d52;
+                    background-color: #fdfdfd;
+                    position: relative;
+                }
+                .first .form .left .form-box .buttom form #design{
+                    padding: 10px 14px;
+                    border-radius: 10px;
+                    border: 2px rgb(248 17 17) solid;
+                    color: rgb(248 17 17);;
+                    text-decoration: none;
+                    position: relative;
+                    top: 25px;
+                    transition: all 0.5s linear;
+                }
+                .first .form .left .form-box .buttom form #design:hover{
+                    background-color: rgb(248 17 17);;
+                    padding: 10px 14px;
+                    color: black;
+                    font-weight: 500;
+                    
+                }
+                .first .form .left{
+                    width: 100%;
+                    height: auto;
+               
+                    min-height: 250px;
+                    position: relative;
+                }
+                .first .form .left .form-box .buttom form #username {
+                    width: 32vw;
+                }
+            }
+            @media (max-width:850px){
+                .container form h1{
+                    font-size: 1.1rem;
+                }
+            .first .form .right .r-panel p{
+                font-size: 0.8rem;
+            }
+            .first .form .right .r-panel h2{
+                font-size: 1rem;
+            }
+            .first .form .right .r-panel{
+                padding: 30px;
+            }
+            .first .form .left .form-box .buttom form {
+                padding-left:0px ;
+            }
+            .first .form .left .form-box .buttom{
+                display: grid;
+                place-items: center;
+            }
+            .first{
+                height: 550px;
+            }
+            .first .form{
+                height: 525px;
+            }
+            }
+            @media (min-width:850px){
+                
+                .first .form .left .form-box .buttom form #design{
+                    opacity: 0;
+                }
+                .first .form .left .form-box .buttom form .design{
+                    opacity: 0;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        {% comment %} <h1>Sign In</h1>
+        <form action="/signin" method="post">
+            {% csrf_token %}
+            <label for="Username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+            <br>
+            <label for="Firstname">Password</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Enter Password" required>
+            
+            <button type="submit">Sign In</button>
+        </form> {% endcomment %}
+
+        <section class="first">
+            <div class="form">
+                <div class="left">
+                    
+                        <div class="form-box">
+                            <div class="top">
+                                <h2>SIGN IN</h2>
+                                <!--<div class="icon">
+                                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.google.co.in" target="_blank"><i class="fa fa-google"></i></a>
+                                    <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                                <p>or, use your email and password</p>!-->
+                            </div>
+                            <div class="buttom">
+                                <form action="/signin" method="post">
+                                    {% csrf_token %}
+                                    <input type="text" id="username" name="username" placeholder="Enter Username">
+                                    <br>
+                                    
+                                    <input type="password" id="pass1" name="pass1" placeholder="Enter password">
+                                    <button type="submit" value="Sign in" id="button">Sign In</button>
+                                    <!--<p class="design">Or, create a new account</p>
+                                    <a href="index2.html" id="design" target="_blank">Sign Up</a>!-->
+                                </form>
+                            </div>
+                        </div>
+                </div>
+                <div class="right">
+                    <div class="r-panel">
+                        <h1 style="font-size:50px;">Hello User!</h1>
+                        <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore ipsum, sint.</p>
+                        <a href="index2.html" target="_blank">Sign Up</a>!-->
+                        
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <script src="" async defer></script>
+    </body>
+</html>

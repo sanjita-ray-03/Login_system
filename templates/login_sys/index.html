@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            height: 900px;
+        }
+        
+        .head {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /*border: 2px solid #585899;
+            box-shadow: 8px 6px 20px black;
+            border-radius: 15%;*/
+            margin-left: 35%;
+            margin-right: 35%;
+        
+            height: 500px;
+        }
+        
+        .title {
+            height: 200px;
+            width: 350px;
+        }
+        
+        .button {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+        
+        .head_cont {
+            background-image: url(https://e0.pxfuel.com/wallpapers/460/460/desktop-wallpaper-texture-surface-dark-blue-iphone-dark-blue-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; 
+            /* background: rgb(11,3,77);
+        background: radial-gradient(circle, rgba(11,3,77,1) 81%, rgba(24,5,191,1) 89%, rgba(38,38,204,1) 95%, rgba(14,200,255,1) 100%); */
+            height: 900px;
+            padding-top:100px;
+        }
+        
+        button {
+            background: hsl(246deg 54.36% 28.16%);
+            height: 50px;
+            width: 180px;
+            font-size: 20px;
+            box-shadow: 6px 6px 2px 2px hsl(0deg 0% 0%);
+            color: white;
+            border-radius: 26px;
+            border: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        button a{
+            color:white;
+            text-decoration:none;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            background: #23234e;
+            transition: 0.3s;
+        }
+        #bad_cre{
+            display:flex;
+            z-index:1;
+            height:30px;
+            background-color:red;
+            color:white;
+        }
+
+        .hello{
+            height:30px;
+        }
+        .success{
+            height:30px;
+        }
+
+        .sign_out{
+
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            align-items:center;
+            text-align:center;
+            background-image:url("https://i.pinimg.com/originals/c5/e2/dc/c5e2dc63db1c67c0ec5f695dbbcd9096.png");
+            background-size:cover;
+            background-repeat:no-repeat;
+            height:900px;
+            padding-top:200px;
+            color:white;
+        }
+
+        .admin_ a{
+            text-decoration:none;
+            color:white;
+            font-size:17px;
+        }
+
+        @media screen and (max-width: 600px) {
+        
+            *{
+                margin: 0;
+                padding: 0;
+                height: 2000px;
+            }
+           
+            .title {
+                height: 150px !important;
+                width: 250px !important;
+            }
+            .head_cont{
+                background-image: url(https://e0.pxfuel.com/wallpapers/460/460/desktop-wallpaper-texture-surface-dark-blue-iphone-dark-blue-background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover; 
+                /* background: rgb(8,18,129);
+                background: radial-gradient(circle, rgba(8,18,129,1) 0%, rgba(24,5,191,1) 23%, rgba(38,38,204,1) 65%, rgba(14,200,255,1) 94%); */
+                height: 1000px;
+                margin:0px;
+            }
+            .head {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /*border: 2px solid #585899;
+                box-shadow: 8px 6px 20px black;
+                border-radius: 15%;*/
+                margin-left: 0%;
+                margin-right: 0%;
+                /*margin-top: 300px;*/
+                height: 600px;
+            }
+        
+        }
+    </style>
+    <body>
+        
+        {% for message in messages%}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" id="bad_cre" role="alert">
+            <strong>Message: </strong>{{ message }}
+            {% comment %} <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">$times;</span>
+            </button> {% endcomment %}
+        </div>
+        {% endfor %}
+
+        {% if user.is_authenticated %}
+        <div class="sign_out">
+            <h1 class="hello">Hello {{ fname}}</h1>
+            <h2 class="success">You're successfully logged in</h2>
+        <div class="button"><button type="submit"><a href="/signout">signout</a></button></div>
+        
+
+
+        </div>
+        
+
+        {%else%}
+
+        {% comment %} <button type="submit"><a href="/signup">signup</a></button>
+        <button type="submit"><a href="/signin">signin</a></button> {% endcomment %}
+        
+        
+        <div class="head_cont">
+            <div class="head">
+                <div class="title"><img src="https://www.pngplay.com/wp-content/uploads/6/Welcome-White-Text-Transparent-PNG.png " alt="error" style="height:100%; width:100%; "></div>
+                
+                <div class="button">
+                    <button type="submit"><a href="/signin">Sign In</a></button>
+                    <br>
+                    <button type="submit"><a href="/signup">Sign Up</a></button>
+                    <br>
+                    
+                </div>
+                <div class="admin_">
+                    <a href="/admin">Are you an Administrator?</a>
+                </div>
+            </div>
+        </div>
+        
+        {% endif %}
+
+
+        <script src="" async defer></script>
+    </body>
+</html>

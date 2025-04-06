@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create account</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        .wrapper{
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: grid;
+            display: flex;
+            justify-content: center;
+            place-items: center;
+        }
+        .wrapper img{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 670px;
+        
+        }
+        .container {
+            height: 560px;
+            width: 532px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 15px rgb(0,0,0.2);
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgb(101 100 7 / 32%);
+            position: absolute;
+            z-index: 10;
+            top: 56px;
+        }
+        .fa {
+            top: -4px;
+            position: relative;
+            width: 14px;
+            height: 15px;
+            border: 2px solid #efefef;
+            border-radius: 5px;
+            padding: 7px 9px 7px 9px;
+            left: 7px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        
+        }
+        .container form{
+            height: 600px;
+            width: 500px;
+            padding: 20px;
+            padding-left: 5px;
+            font-family: system-ui;
+            text-align: center;
+        }
+        .container form h1{
+            text-align: center;
+            font-family: system-ui;
+            margin-bottom: 50px;
+        }
+        .container form #username,#email,#fname,#lname,#pass1,#pass2,#date,#number{
+         height: 31px;
+            width: 240px;
+            margin-bottom: 23px;
+            border: none;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            background-color: #ededed;
+            position: relative;
+            top: -6px;
+        }
+        /* .container form #radio{
+        
+        } */
+        .container form .design{
+            width: 137px;
+            height: 24px;
+            margin-right: 20px;
+            display: inline-block;
+        }
+        .container form .design b{
+           float: right;
+        }
+        
+        .container form #username::placeholder , #fname::placeholder, #lname::placeholder, #pass1::placeholder , #pass2::placeholder , #number::placeholder , #email::placeholder #date::placeholder , #radio::placeholder{
+            position: relative;
+            left: 20px;
+        }
+        .container form button{
+            height: 43px;
+            width: 120px;
+            background-color: orangered;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+        
+        }
+        /*
+        @mediaQuery
+        */
+        @media(max-width:700px){
+            
+            .wrapper img{
+                width: 140vw;
+                
+            }
+            .container{
+                width: 408px;
+        
+                padding-right: 45px;
+        
+            }
+            .container form{
+                width: 300px;
+            }
+            .container form #username,#email,#fname,#lname,#pass1,#pass2,#date{
+                width: 180px;
+            }
+            .container form .fa{
+                width: 0px;
+                height: 0px;
+                padding: 0px;
+                opacity: 0;
+            }
+        .container form .design{
+            width: 60px;
+            height: 24px;
+            margin-right: 29px;
+        }
+        .container form .design b{
+            font-size: 0.95rem;
+        }
+        .container form h1{
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        
+        }
+        .container form button{
+            width: 80px;
+            font-size: 0.8rem;
+        }
+        
+        }
+        @media(max-width:500px){
+            .container{
+        
+            width: 280px;
+            min-width: fit-content;
+        
+        }
+        .container form{
+            width: 241px;
+        }
+        .container form #username,#email,#fname,#lname,#pass1,#pass2,#date{
+            width: 123px;
+        }
+        .container form ,.design{
+            margin: 0px;
+        }
+        }
+        @media(max-width:450px){
+            .container{
+                width: fit-content;
+                min-width: 200px;
+            }
+        }
+    </style>
+
+    <body>
+        <section class="wrapper">
+            <!--<img src="assets/bg.png" alt="bg-image">!-->
+        <div class="container">
+        {% comment %} <h1>Sign Up</h1> {% endcomment %}
+        {% comment %} <form action="/signup" method="post">
+            {% csrf_token %}
+            <label for="Username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Create a username(Only letters and numbers)" required>
+            <br>
+            <label for="Firstname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter Firstname" required>
+            <br>
+            <label for="Lastname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter Lastname" required> 
+            <br>
+            <label for="Email Address">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <br>
+            <label for="Password">Password</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Create a password" required>
+            <br>
+            <label for="Confirm your password">Confirm your password</label>
+            <input type="password" id="pass2" name="pass2" placeholder="Confirm your password" required>
+            <br>
+            <button type="submit">Sign Up</button> {% endcomment %}
+            <form action="/signup" method="post">
+                {% csrf_token %}
+                <h1>Create an Account</h1>
+        
+                <div class="design"><b>Userame</b></div>
+                <input type="text" id="username" name="username" placeholder="Create a username(Only letters and numbers)" required>
+        
+                <br>
+                <div class="design"><b>First Name</b></div>
+                <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
+        
+                <br>
+                <div class="design"><b>Last Name</b></div>
+                <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+                <br>
+                 <div class="design"><b>Email</b></div> 
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <br>
+                <div class="design"><b>Create Password</b></div>
+                <input type="Password" id="pass1" name="pass1" placeholder="Create a password" required>
+                <br>
+                <div class="design"><b>Confirm Password</b></div>
+                <input type="Password" id="pass2" name="pass2" placeholder="Confirm your password" required> 
+                <br>
+        
+                <button type="submit">SIGN UP</button>
+            </form>
+        </form>
+        <script src="" async defer></script>
+    </body>
+</html>
